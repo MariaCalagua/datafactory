@@ -1,0 +1,9 @@
+{
+	"name": "calaguafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "88e570d6-25ee-490d-ba47-42d8efe431f9",
+		"tenantId": "f273ee6d-6afe-44b6-ae31-54da3491acd6"
+	}
+}

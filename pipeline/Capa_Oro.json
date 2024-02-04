@@ -18,7 +18,7 @@
 					"notebookPath": "/Users/mcalagegus@gmail.com/Transferirdatos_capaoro"
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricks_datafactory1",
+					"referenceName": "AzureDatabricks_datafactory",
 					"type": "LinkedServiceReference"
 				}
 			}

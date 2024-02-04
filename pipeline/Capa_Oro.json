@@ -13,7 +13,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/mcalagegus@gmail.com/Transferirdatos_capaoro"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_datafactory1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []

@@ -1,0 +1,98 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Nombre de instancia de Data Factory",
+			"defaultValue": "calaguafactory"
+		},
+		"AzureDatabricks_datafactory_accessToken": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accessToken\"de \"AzureDatabricks_datafactory\""
+		},
+		"AzureDatabricks_datafactory1_accessToken": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accessToken\"de \"AzureDatabricks_datafactory1\""
+		},
+		"inputfile_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accountKey\"de \"inputfile_ADLS\""
+		},
+		"inputfile_copyADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accountKey\"de \"inputfile_copyADLS\""
+		},
+		"AzureDatabricks_datafactory_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0203-010234-6w72wk8s"
+		},
+		"AzureDatabricks_datafactory1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0203-010234-6w72wk8s"
+		},
+		"inputfile_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mcalaguastorage.dfs.core.windows.net/"
+		},
+		"inputfile_copyADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mcalaguastorage.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI de la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas."
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Token de SAS para la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "calaguafactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDatabricks_datafactory_accessToken": {
+						"value": "[parameters('AzureDatabricks_datafactory_accessToken')]"
+					},
+					"AzureDatabricks_datafactory1_accessToken": {
+						"value": "[parameters('AzureDatabricks_datafactory1_accessToken')]"
+					},
+					"inputfile_ADLS_accountKey": {
+						"value": "[parameters('inputfile_ADLS_accountKey')]"
+					},
+					"inputfile_copyADLS_accountKey": {
+						"value": "[parameters('inputfile_copyADLS_accountKey')]"
+					},
+					"AzureDatabricks_datafactory_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks_datafactory_properties_typeProperties_existingClusterId')]"
+					},
+					"AzureDatabricks_datafactory1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks_datafactory1_properties_typeProperties_existingClusterId')]"
+					},
+					"inputfile_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('inputfile_ADLS_properties_typeProperties_url')]"
+					},
+					"inputfile_copyADLS_properties_typeProperties_url": {
+						"value": "[parameters('inputfile_copyADLS_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

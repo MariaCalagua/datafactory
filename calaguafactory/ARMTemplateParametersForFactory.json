@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "calaguafactory"
+		},
+		"AzureDatabricks_datafactory_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricks_datafactory1_accessToken": {
+			"value": ""
+		},
+		"inputfile_ADLS_accountKey": {
+			"value": ""
+		},
+		"inputfile_copyADLS_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks_datafactory_properties_typeProperties_existingClusterId": {
+			"value": "0203-010234-6w72wk8s"
+		},
+		"AzureDatabricks_datafactory1_properties_typeProperties_existingClusterId": {
+			"value": "0203-010234-6w72wk8s"
+		},
+		"inputfile_ADLS_properties_typeProperties_url": {
+			"value": "https://mcalaguastorage.dfs.core.windows.net/"
+		},
+		"inputfile_copyADLS_properties_typeProperties_url": {
+			"value": "https://mcalaguastorage.dfs.core.windows.net/"
+		}
+	}
+}

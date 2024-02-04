@@ -13,7 +13,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/mcalagegus@gmail.com/Transferenciadedatos_capaplata2024-02-02 20:15:29"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_datafactory",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
